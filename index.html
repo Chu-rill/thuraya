@@ -25,7 +25,7 @@
           />
         </div>
         <div class="content">
-          <iframe
+          <!-- <iframe
             id="audio"
             style="border-radius: 12px"
             src="https://open.spotify.com/embed/track/1PDP7mLiAMwhfmgIwzhOm2?utm_source=generator?rel=0&autoplay=1"
@@ -36,7 +36,12 @@
             allow="autoplay; encrypted-media"
           >
             loading="lazy" ></iframe
-          >
+          > -->
+
+          <audio
+            id="audio"
+            src="https://raw.githubusercontent.com/Chu-rill/thuraya/master/Drake%20-%20Yebba%E2%80%99s%20Heartbreak%20(Audio).mp3"
+          ></audio>
 
           <h2>To My Favorite Heroine 🗡️</h2>
           <p>
@@ -77,6 +82,34 @@
         </p>
       </footer>
     </div>
-    <script></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const audio = document.getElementById("audio");
+
+        // Try autoplay (will likely be blocked)
+        audio.play().catch(() => {
+          console.log("Autoplay blocked, waiting for user interaction...");
+
+          // Create an invisible button to trigger play
+          const button = document.createElement("button");
+          button.style.position = "absolute";
+          button.style.opacity = "0";
+          button.innerText = "Play";
+          document.body.appendChild(button);
+
+          // Trigger a click programmatically
+          button.click();
+
+          // Play when the user interacts with the page
+          document.addEventListener(
+            "click",
+            () => {
+              audio.play();
+            },
+            { once: true }
+          );
+        });
+      });
+    </script>
   </body>
 </html>
