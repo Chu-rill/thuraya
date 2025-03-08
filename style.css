@@ -74,18 +74,18 @@ h1 {
 }
 .heart {
   color: var(--deep-red);
-  animation: pulse 1s infinite;
+  animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
   0% {
-    transform: scale(1);
+    font-size: 1em;
   }
   50% {
-    transform: scale(1.2);
+    font-size: 1.2em;
   }
   100% {
-    transform: scale(1);
+    font-size: 1em;
   }
 }
 
@@ -102,6 +102,6 @@ h1 {
 @media (max-width: 480px) {
   body {
     background-image: none;
-    background-color: var(--royal-purple);
+    background: linear-gradient(to right, var(--soft-pink), var(--gold));
   }
 }
