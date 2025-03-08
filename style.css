@@ -1,0 +1,108 @@
+:root {
+  --primary-color: #c3272b;
+  --secondary-color: #2c3e50;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.6;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://images.unsplash.com/photo-1631376337793-89a03fc24a19?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80");
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 3.5rem;
+  color: var(--primary-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+}
+
+.anime-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 3rem 0;
+  align-items: center;
+}
+
+.aot-image {
+  flex: 1;
+  min-width: 300px;
+  border: 3px solid var(--primary-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.aot-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.music-section {
+  background: rgba(44, 62, 80, 0.9);
+  padding: 2rem;
+  border-radius: 15px;
+  margin: 2rem 0;
+}
+
+.heart {
+  color: var(--primary-color);
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .anime-section {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background-image: none;
+    background-color: var(--secondary-color);
+  }
+}
