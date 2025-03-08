@@ -11,18 +11,6 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Audio Player -->
-    <audio
-      id="birthday-audio"
-      style="position: fixed; bottom: 20px; left: 20px"
-    >
-      <source
-        src="https://example.com/yebba-heartbreak.mp3"
-        type="audio/mpeg"
-      />
-      Your browser does not support the audio element.
-    </audio>
-
     <div class="container">
       <header>
         <h1>Happy Birthday, My Queen! <span class="heart">♥</span></h1>
@@ -38,15 +26,18 @@
         </div>
         <div class="content">
           <iframe
+            id="audio"
             style="border-radius: 12px"
-            src="https://open.spotify.com/embed/track/1PDP7mLiAMwhfmgIwzhOm2?utm_source=generator"
+            src="https://open.spotify.com/embed/track/1PDP7mLiAMwhfmgIwzhOm2?utm_source=generator?rel=0&autoplay=1"
             width="50%"
             height="152"
             frameborder="0"
             allowfullscreen=""
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-          ></iframe>
+            allow="autoplay; encrypted-media"
+          >
+            loading="lazy" ></iframe
+          >
+
           <h2>To My Favorite Heroine 🗡️</h2>
           <p>
             Like Eren's determination and Mikasa's strength, you conquer every
@@ -86,5 +77,6 @@
         </p>
       </footer>
     </div>
+    <script></script>
   </body>
 </html>
