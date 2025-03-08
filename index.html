@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Happy Birthday, [Her Name]! 🎉</title>
+    <title>Happy Birthday, [Her Name]! 🌸</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap"
       rel="stylesheet"
@@ -11,10 +11,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Audio Player -->
+    <audio
+      id="birthday-audio"
+      style="position: fixed; bottom: 20px; left: 20px"
+    >
+      <source
+        src="https://example.com/yebba-heartbreak.mp3"
+        type="audio/mpeg"
+      />
+      Your browser does not support the audio element.
+    </audio>
+
     <div class="container">
       <header>
-        <h1>Happy Birthday, My Love! <span class="heart">♥</span></h1>
-        <p class="tagline">A Titan-sized Celebration Just for You!</p>
+        <h1>Happy Birthday, My Queen! <span class="heart">♥</span></h1>
+        <p class="tagline">A Royal Celebration Fit for a Titan Queen</p>
       </header>
 
       <section class="anime-section">
@@ -25,37 +37,53 @@
           />
         </div>
         <div class="content">
-          <h2>To the Levi of My Heart ❤️</h2>
+          <iframe
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/track/1PDP7mLiAMwhfmgIwzhOm2?utm_source=generator"
+            width="50%"
+            height="152"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+          <h2>To My Favorite Heroine 🗡️</h2>
           <p>
-            Just like Eren's determination and Mikasa's loyalty, my love for you
-            knows no bounds. You're my favorite adventure in this anime called
-            life!
+            Like Eren's determination and Mikasa's strength, you conquer every
+            challenge with grace. In this anime of life, you're my perfect
+            protagonist.
           </p>
         </div>
       </section>
 
-      <section class="music-section">
-        <h2>Our Hip-Hop Symphony 🎧</h2>
+      <section class="letter-section">
+        <h2>My Heart's Message 📜</h2>
+        <p>My Dearest [Her Name],</p>
+        <p>On this special day, I want you to know...</p>
         <p>
-          From the streets of Shiganshina to the beats of our favorite rap
-          tracks, let's conquer this birthday like the Titans we are!
+          You're the Levi to my chaos, the perfect harmony to my rap beat, the
+          royal blue in my sky. Like your favorite Titans, your presence
+          commands attention, but unlike them, you've captured my heart
+          completely.
         </p>
-        <!-- Add your Spotify playlist embed code here -->
-        <iframe
-          style="border-radius: 12px; margin-top: 1rem"
-          src="https://open.spotify.com/embed/playlist/37i9dQZF1DX0XUsuxWHRQd?utm_source=generator"
-          width="100%"
-          height="152"
-          frameborder="0"
-          allowfullscreen=""
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-        >
-        </iframe>
+        <p>
+          May this year bring you more joy than Attack on Titan plot twists,
+          more sweetness than our favorite anime openings, and more love than
+          all the heartbreak songs combined.
+        </p>
+        <p>
+          Forever Yours,<br />
+          [Your Name]
+        </p>
       </section>
 
-      <footer style="text-align: center; margin-top: 3rem">
-        <p>Made with <span class="heart">♥</span> by Your Eternal Partner</p>
+      <footer
+        style="text-align: center; margin-top: 3rem; color: var(--accent-color)"
+      >
+        <p>
+          Made with <span class="heart">♥</span> & the strength of the Founding
+          Titan
+        </p>
       </footer>
     </div>
   </body>

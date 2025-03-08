@@ -1,6 +1,9 @@
 :root {
-  --primary-color: #c3272b;
-  --secondary-color: #2c3e50;
+  --royal-purple: #4b0082;
+  --gold: #ffd700;
+  --primary-color: #ff69b4; /* Hot Pink */
+  --secondary-color: #ffffff; /* White */
+  --accent-color: #ff4500; /* Orange Red */
 }
 
 * {
@@ -12,12 +15,13 @@
 body {
   font-family: "Quicksand", sans-serif;
   line-height: 1.6;
-  color: white;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  color: var(--secondary-color);
+  background-color: black;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url("https://images.unsplash.com/photo-1631376337793-89a03fc24a19?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80");
   background-attachment: fixed;
   background-size: cover;
-  min-height: 100vh;
+  min-height: 100vh; */
 }
 
 .container {
@@ -35,7 +39,7 @@ h1 {
   font-family: "Pacifico", cursive;
   font-size: 3.5rem;
   color: var(--primary-color);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px var(--accent-color);
   margin-bottom: 1rem;
 }
 
@@ -66,11 +70,12 @@ h1 {
   min-width: 300px;
 }
 
-.music-section {
-  background: rgba(44, 62, 80, 0.9);
+.letter-section {
+  background: rgba(255, 105, 180, 0.9); /* Hot Pink with opacity */
   padding: 2rem;
   border-radius: 15px;
   margin: 2rem 0;
+  border: 2px solid var(--primary-color);
 }
 
 .heart {
@@ -90,6 +95,28 @@ h1 {
   }
 }
 
+/* Audio Player Styling */
+.audio-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 69, 0, 0.8); /* Orange Red with opacity */
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid var(--primary-color);
+}
+
+.audio-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--accent-color);
+  color: var(--secondary-color);
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 2.5rem;
@@ -103,6 +130,31 @@ h1 {
 @media (max-width: 480px) {
   body {
     background-image: none;
-    background-color: var(--secondary-color);
+    background-color: var(--royal-purple);
   }
+}
+/* Add this new button styling */
+.music-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: var(--accent-color);
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: "Pacifico", cursive;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.music-button:hover {
+  transform: scale(1.05);
+  background: #ff6b6b;
+}
+
+/* Hide the default audio controls */
+#birthday-audio {
+  display: none;
 }
