@@ -75,7 +75,8 @@ h1 {
 .heart {
   color: var(--primary);
 }
-.heart:nth-child(1) {
+.heart-animation {
+  color: var(--primary);
   animation: pulse 2s infinite;
 }
 @keyframes pulse {
