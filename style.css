@@ -1,7 +1,7 @@
 :root {
-  --soft-pink: #ffcad4;
-  --deep-red: #ff4d6d;
-  --gold: #ffd700;
+  --primary: #ff85a2; /* Bubblegum Pink */
+  --secondary: #ffd700; /* Sunshine Yellow */
+  --accent: #87ceeb; /* Sky Blue */
   --white: #ffffff;
   --text-color: #222;
 }
@@ -15,7 +15,7 @@
 body {
   font-family: "Quicksand", sans-serif;
   line-height: 1.6;
-  background: linear-gradient(to right, var(--soft-pink), var(--gold));
+  background: linear-gradient(to right, var(--primary), var(--accent));
   color: var(--text-color);
   min-height: 100vh;
 }
@@ -33,8 +33,8 @@ header {
 h1 {
   font-family: "Pacifico", cursive;
   font-size: 3.5rem;
-  color: var(--deep-red);
-  text-shadow: 2px 2px 6px var(--gold);
+  color: var(--primary);
+  text-shadow: 2px 2px 6px var(--secondary);
   text-align: center;
 }
 
@@ -69,20 +69,22 @@ h1 {
   background: rgba(255, 255, 255, 0.9);
   padding: 2rem;
   border-radius: 15px;
-  border: 3px solid var(--gold);
+  border: 3px solid var(--secondary);
   color: var(--text-color);
 }
 .heart {
-  color: var(--deep-red);
+  color: var(--primary);
+}
+.heart:nth-child(1) {
   animation: pulse 2s infinite;
 }
-
 @keyframes pulse {
   0% {
     font-size: 1em;
   }
   50% {
     font-size: 1.2em;
+    color: var(--secondary);
   }
   100% {
     font-size: 1em;
