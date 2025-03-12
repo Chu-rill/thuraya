@@ -1,32 +1,48 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const audio = document.getElementById("audio");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const audio = document.getElementById("audio");
 
-  // Try autoplay (will likely be blocked)
-  audio.play().catch(() => {
-    console.log("Autoplay blocked, waiting for user interaction...");
+//   // Try autoplay (will likely be blocked)
+//   audio.play().catch(() => {
+//     console.log("Autoplay blocked, waiting for user interaction...");
 
-    // Create an invisible button to trigger play
-    const button = document.createElement("button");
-    button.style.position = "absolute";
-    button.style.opacity = "0";
-    button.innerText = "Play";
-    document.body.appendChild(button);
+//     // Create an invisible button to trigger play
+//     const button = document.createElement("button");
+//     button.style.position = "absolute";
+//     button.style.opacity = "0";
+//     button.innerText = "Play";
+//     document.body.appendChild(button);
 
-    // Trigger a click programmatically
-    button.click();
+//     // Trigger a click programmatically
+//     button.click();
 
-    // Play when the user interacts with the page
-    document.addEventListener(
-      "click",
-      () => {
-        audio.play();
-      },
-      { once: true }
-    );
-  });
-});
+//     // Play when the user interacts with the page
+//     document.addEventListener(
+//       "click",
+//       () => {
+//         audio.play();
+//       },
+//       { once: true }
+//     );
+//   });
+// });
 
 //slide show
+
+document.addEventListener("DOMContentLoaded", () => {
+  const audio = document.getElementById("audio");
+  const startButton = document.getElementById("startAudio");
+
+  // Try autoplay first
+  audio.play().catch(() => {
+    console.log("Autoplay blocked, waiting for user click...");
+    startButton.style.display = "block"; // Show button if autoplay fails
+  });
+
+  startButton.addEventListener("click", () => {
+    audio.play();
+    startButton.style.display = "none"; // Hide button after click
+  });
+});
 let slideIndex = 0;
 const slides = document.getElementsByClassName("slide");
 const dots = document.getElementsByClassName("dot");
