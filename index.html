@@ -22,16 +22,44 @@
 
       <section class="anime-section">
         <div class="aot-image">
-          <img
-            src="https://images.unsplash.com/photo-1579546929662-711aa81148cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
-            alt="Attack on Titan Theme"
-          />
+          <div class="slideshow-container">
+            <div class="slide active">
+              <img src="./image1.jpg" alt="Attack on Titan Theme" />
+            </div>
+
+            <div class="slide">
+              <img src="./image2.jpg" />
+            </div>
+
+            <div class="slide">
+              <video controls>
+                <source src="./vid1.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            <div class="slide">
+              <img src="./image3.jpg" alt="Sunset" />
+            </div>
+
+            <!-- Navigation arrows -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+          </div>
+
+          <div class="dots-container">
+            <span class="dot active-dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
         </div>
+
         <div class="content">
-          <!-- <audio
+          <audio
             id="audio"
             src="https://raw.githubusercontent.com/Chu-rill/thuraya/master/Drake%20-%20Yebba%E2%80%99s%20Heartbreak%20(Audio).mp3"
-          ></audio> -->
+          ></audio>
 
           <h2>To My Favorite Heroine 🗡️</h2>
           <p>

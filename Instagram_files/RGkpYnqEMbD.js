@@ -1,0 +1,3 @@
+;/*FB_PKG_DELIM*/
+
+__d("useCreateOneTapNonces",["CAAPlatformData","CometRelay","useCreateOneTapNoncesFBMutation.graphql","useIGCreateNoncesMutation"],(function(a,b,c,d,e,f,g){"use strict";var h;function i(a,b){(a==null||a.length===0)&&b()}function a(a,e){var f=d("CometRelay").useMutation(h!==void 0?h:h=b("useCreateOneTapNoncesFBMutation.graphql")),g=f[0];f=f[1];var j=function(){g({onCompleted:function(a,b){return i(b,e)},variables:{input:{}}})},k=c("useIGCreateNoncesMutation")(e),l=k[0];k=k[1];switch(a){case d("CAAPlatformData").CAAPlatformApp.WWW_COMET:return[j,f];case d("CAAPlatformData").CAAPlatformApp.INSTAGRAM_WEB:return[l,k]}}g.useCreateOneTapNonces=a}),98);
